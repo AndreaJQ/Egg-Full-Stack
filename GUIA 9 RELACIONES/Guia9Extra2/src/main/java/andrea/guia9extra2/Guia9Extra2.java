@@ -25,6 +25,8 @@ podemos mostrarla con la letra y numero de cada asiento o solo las X y espacios 
 
 package andrea.guia9extra2;
 
+import Service.ServiceCine;
+
 /**
  *
  * @author andreajalil
@@ -32,6 +34,7 @@ package andrea.guia9extra2;
 public class Guia9Extra2 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        ServiceCine scine=new ServiceCine();
+        scine.menu();
     }
 }
