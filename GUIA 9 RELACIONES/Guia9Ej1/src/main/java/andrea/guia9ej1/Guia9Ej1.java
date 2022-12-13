@@ -62,5 +62,5 @@ public class Guia9Ej1 {
                 + "edad: "+p3.getMascota().getEdad()+"\n"
                         + "raza: "+p3.getMascota().getRaza()+"\n"
                                 + "tamaño: " +p3.getMascota().getTamaño());
-    }
+           }
 }

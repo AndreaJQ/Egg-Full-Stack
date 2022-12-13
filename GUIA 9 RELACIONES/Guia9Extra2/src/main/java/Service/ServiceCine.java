@@ -130,9 +130,9 @@ public class ServiceCine {
         System.out.println("Película a mostrar: " + cine.getMovie().getTitulo());
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 6; j++) {
-                System.out.print("|" + cine.getS1().getButacas()[i][j]);
+                System.out.print("\033[32m|\033[0m" + cine.getS1().getButacas()[i][j]);
             }
-            System.out.println("|");
+            System.out.println("\033[32m|\033[0m");
         }
         System.out.println("-----------------------------------");
         System.out.println("Asigando butaca a especatador...");
@@ -141,9 +141,9 @@ public class ServiceCine {
         System.out.println("Mostrando butacas en sala: ");
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 6; j++) {
-                System.out.print("|" + cine.getS1().getButacas()[i][j]);
+                System.out.print("\033[32m|\033[0m" + cine.getS1().getButacas()[i][j]);
             }
-            System.out.println("|");
+            System.out.println("\033[32m|\033[0m");
         }
         System.out.println(cine.getEspect());
     }

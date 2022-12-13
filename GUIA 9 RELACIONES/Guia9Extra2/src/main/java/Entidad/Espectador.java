@@ -47,8 +47,8 @@ public class Espectador {
     @Override
     public String toString() {
         return "Nombre=" + nombre + "\n"
-                + ", edad " + edad + "\n"
-                +", dinero $" + dineroDisponible + "\n"
+                + "edad " + edad + "\n"
+                +"dinero $" + dineroDisponible + "\n"
                 + "";
     }
 
