@@ -11,6 +11,6 @@ package andrea.guia10manosalaobra2interfaz;
 public class Guia10ManosAlaObra2Interfaz {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+     
     }
 }

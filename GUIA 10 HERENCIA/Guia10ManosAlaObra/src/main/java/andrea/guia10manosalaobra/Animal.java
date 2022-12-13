@@ -7,31 +7,15 @@ Animal a = new Animal();
 Animal b = new Perro();
 Animal c = new Gato();
 Agregaremos a la lista a cada uno y luego, con un for each, recorreremos la lista llamando al método hacerRuido() de cada ítem.*/
-
-package andrea.guia10manosalaobra1;
-
-import java.util.ArrayList;
+package andrea.guia10manosalaobra;
 
 /**
  *
  * @author andreajalil
  */
-public class Guia10ManosAlaObra1 {
-
-    public static void main(String[] args) {
-     ArrayList<Animal> animales = new ArrayList<>();
-        Animal a = new Animal();
-        Animal b = new Perro();
-        Animal c = new Gato();
-        
-        animales.add(a);
-        animales.add(b);
-        animales.add(c);
-        
-        for (Animal animals : animales) {
-            animals.hacerRuido();
-            System.out.println("---");
-        }
-      
+public class Animal {
+    
+    public void hacerRuido(){
+        System.out.println("Hola");
     }
 }

@@ -44,17 +44,17 @@ public class Mascota extends AnimalesAbstract{
 
     @Override
     public void pasear(int cantVueltas) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        //agregar metodo
     }
 
     @Override
     public void molestarDueño() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        //agregar metodo
     }
 
     @Override
     public void comerAlimento(int cantidad) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        //agregar metodo
     }
 
     

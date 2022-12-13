@@ -14,6 +14,5 @@ public abstract class AnimalesAbstract {
     
     public abstract void pasear (int cantVueltas);
     public abstract void molestarDueño();
- 
     public abstract void comerAlimento (int cantidad);
 }
