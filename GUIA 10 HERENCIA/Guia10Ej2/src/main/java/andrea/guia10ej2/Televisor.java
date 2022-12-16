@@ -65,19 +65,22 @@ public class Televisor extends Electrodomestico{
 se incrementará el precio un 30% y si tiene un sintonizador TDT incorporado, aumentará $500.
     */
    public void precioFinalTv(){
-       if (this.resolucion>=40) {
-           this.precio= this.precio*1.30;
-          
-       }
+     
        if (sintonizador) {
            this.precio+=500;
+       }
+         if (this.resolucion>=40) {
+           this.precio= this.precio*1.30;
+          
        }
        
    }
    public void mostrarInfo(){
         System.out.println("El consumo energetico es: '"+this.letraConsumo+"'\n"
                 + "El color es: '"+ this.color +"' \n"
-                        + "y el peso es "+this.peso+"\n"
+                        + "el peso es "+this.peso+"\n"
+                                + "la resolución es: "+this.resolucion+"\n"
+                                        + "sintonizador: " +this.sintonizador +"\n"
         + "El precio final será: $"+this.precio );
    }
    

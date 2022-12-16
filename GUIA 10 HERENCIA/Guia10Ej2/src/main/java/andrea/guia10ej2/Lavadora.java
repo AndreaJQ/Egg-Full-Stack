@@ -53,9 +53,10 @@ public class Lavadora extends Electrodomestico{
        
    }
    public void mostrarInfo(){
-        System.out.println("El consumo energetico es: '"+this.letraConsumo+"'\n"
+       System.out.println("El consumo energetico es: '"+this.letraConsumo+"'\n"
                 + "El color es: '"+ this.color +"' \n"
-                        + "y el peso es "+this.peso+"\n"
+                        + "el peso es "+this.peso+"\n"
+                                + "y el nivel de carga es: "+this.carga +"\n"
         + "El precio final será: $"+this.precio );
    }
    
