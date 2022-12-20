@@ -57,24 +57,25 @@ public class Televisor extends Electrodomestico{
         if (sinto.equalsIgnoreCase("s")) {
              this.sintonizador=true;
         }
-       precioFinalTv();
+       precioFinal();
        mostrarInfo();
    }
    /*
     Si el televisor tiene una resolución mayor de 40 pulgadas, 
 se incrementará el precio un 30% y si tiene un sintonizador TDT incorporado, aumentará $500.
     */
-   public void precioFinalTv(){
-     
-       if (sintonizador) {
+
+    @Override
+    public void precioFinal() {
+        super.precioFinal();
+        if (sintonizador) {
            this.precio+=500;
        }
          if (this.resolucion>=40) {
            this.precio= this.precio*1.30;
           
        }
-       
-   }
+    }
    public void mostrarInfo(){
         System.out.println("El consumo energetico es: '"+this.letraConsumo+"'\n"
                 + "El color es: '"+ this.color +"' \n"

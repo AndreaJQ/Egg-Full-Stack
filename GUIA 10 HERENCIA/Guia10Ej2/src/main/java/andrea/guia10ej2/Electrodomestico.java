@@ -135,7 +135,6 @@ public class Electrodomestico {
         this.letraConsumo = comprobarConsumoEnergetico(letra);
         System.out.println("Cuanto Pesa?");
         this.peso = (int) leer.nextDouble();
-        precioFinal();
 
     }
     

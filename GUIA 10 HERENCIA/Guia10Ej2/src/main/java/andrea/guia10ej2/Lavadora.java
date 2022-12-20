@@ -42,16 +42,18 @@ public class Lavadora extends Electrodomestico{
        super.crearElectrodomestico();
        System.out.println("¿Qué carga tiene la lavadora?");
        this.carga=leer.nextInt();
-       precioFinalLavadora();
+       precioFinal();
        mostrarInfo();
    }
-   
-   public void precioFinalLavadora(){
-       if (this.carga>=30) {
+
+    @Override
+    public void precioFinal() {
+        super.precioFinal(); 
+        if (this.carga>=30) {
            this.precio+=500;
        }
-       
-   }
+    }
+
    public void mostrarInfo(){
        System.out.println("El consumo energetico es: '"+this.letraConsumo+"'\n"
                 + "El color es: '"+ this.color +"' \n"
