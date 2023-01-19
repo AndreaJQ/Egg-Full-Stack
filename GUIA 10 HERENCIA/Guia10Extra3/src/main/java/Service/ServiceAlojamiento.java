@@ -80,7 +80,7 @@ public class ServiceAlojamiento {
             System.out.println(aux.toString());
         }); 
     }
-    
+  
     public void campingConResto(ArrayList<Alojamiento> lista){
         for (Alojamiento aux : lista) {
             if (aux instanceof Campings) {
