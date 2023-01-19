@@ -48,7 +48,7 @@ Realizar un sistema de consulta que le permite al usuario consultar por diferent
 • todos los alojamientos.
 • todos los hoteles de más caro a más barato.
 • todos los campings con restaurante
-• todos las residencias que tienen descuento.*/
+• todos las residencias que tienen descuento. */
 
 package andrea.guia10extra3;
 
