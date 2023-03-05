@@ -143,6 +143,24 @@ public class ProductoDAO extends DAO{
         
     }
     
+      public Collection<Producto> listarProductosNombre() throws Exception {
+        try {
+            String sql = "SELECT nombre FROM Producto ";
+            consultarBase(sql);
+            Producto producto = null;
+            Collection<Producto> productos = new ArrayList();
+            while (resultado.next()) {
+                producto = new Producto(resultado.getInt(1), resultado.getString(2), resultado.getDouble(3), resultado.getInt(4));
+                productos.add(producto);
+            }
+            desconectarBase();
+            return productos;
+        } catch (Exception ex) {
+            desconectarBase();
+            throw ex;
+        }
+    }
+      
       public List<Producto> listarProductos() throws Exception {
         try {
             String sql = "SELECT * FROM producto ";

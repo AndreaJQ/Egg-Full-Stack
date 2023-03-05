@@ -151,7 +151,7 @@ public class ProductoService {
     
     public void mostrarProductos() throws Exception{
         try {
-            List<Producto> productos=pDAO.listarProductos();
+            List<Producto> productos=pDAO.listarProductosporNombre();
             
             if (productos.isEmpty()) {
                 throw new Exception("NO EXISTEN PRODUCTOS LISTADOS");
