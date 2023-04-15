@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- ENGLOBA A LOS DEMÁS -->
+<head> <!-- CABECERA - VAN ELEMENTOS QUE SE VAN A COMUNICAR CON EL NAVEGADOR-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRÁCTICA</title>
+</head>
+<body> <!-- PUEDEN ANIDARSE ELEMENTOS -->
+    <header> <!-- ENCABEZADO -->
+        <nav> <!-- ELEMENTOS DE NAVEGACION PUEDE ENGLOBAR ADENTRO LISTAS DESORDENADAS -->
+            <img src="" alt=""> <!-- SE PUEDE AGREGAR IMAGEN -->
+            <ul> <!-- UNORDERED LIST -->
+                    <li> <!-- ITEMS DE LA LISTA -->
+                        <a href="/inicio">INICIO</a> <!-- links a otros sitios -->
+                    </li>
+                    <li> <!-- ITEMS DE LA LISTA -->
+                        <a href="/nosotros">NOSOTROS</a> <!-- links a otros sitios -->
+                    </li>
+            </ul>
+            <h1 >Titulo de Página</h1> <!-- TITULAR PARA EL SITIO -->
+        </nav>
+    </header>
+    <section> <!-- ENCAPSULAR ELEMENTOS - mayor peso semantico que el div -->
+        <h2> <!-- GUARDAR TEXTO (MAYOR NUMERO MENOR PESO SEMANTICO) -->
+            Titulo de sección
+        </h2>
+        <p> <!-- PARA TEXTO MÁS EXPLICATIVO - PARRAFOS -->
+            1er Texto dentro de parrafo
+        </p>
+        <p> 2do Texto dentro de parrafo</p>
+    </section>
+    <div> <!-- ENCAPSULAR ELEMENTOS -->
+        <h4>Encabezado de menor jerarquía.</h4>
+        <!-- ETIQUETAS SPAN SE CARGAN EN LINEA NO COMO EL PARRAFO -->
+        <span>1ER Texto dentro de span- con menor jerarquía que la etiqueta p</span>
+        <span>2DO Texto dentro de span- con menor jerarquía que la etiqueta p</span>
+    </div>
+    <footer> <!-- PIE DE PÁGINA - ENGLOBA MENU DE NAV O INFORMACIÓN INSTITUCIONAL-->
+         <!-- se puede repetir la lista de navegación -->
+         <ol>
+            <li><a href="/inicio">INICIO</a></li> <!-- etiquetas de variable o clase o img-->
+            <li><a href="/nosotros">NOSOTROS</a></li>
+         </ol>
+    </footer>
+</body>
+</html>

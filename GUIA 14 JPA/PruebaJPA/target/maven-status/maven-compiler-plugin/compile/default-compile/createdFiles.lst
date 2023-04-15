@@ -1,0 +1,9 @@
+andrea/pruebajpa/services/Controladora.class
+andrea/pruebajpa/persistencia/AlumnoJpaController.class
+andrea/pruebajpa/entidad/Alumno.class
+andrea/pruebajpa/PruebaJPA.class
+andrea/pruebajpa/persistencia/exceptions/PreexistingEntityException.class
+andrea/pruebajpa/persistencia/ControladoraPersistencia.class
+andrea/pruebajpa/persistencia/exceptions/NonexistentEntityException.class
+andrea/pruebajpa/persistencia/exceptions/IllegalOrphanException.class
+andrea/pruebajpa/entidad/Alumno_.class

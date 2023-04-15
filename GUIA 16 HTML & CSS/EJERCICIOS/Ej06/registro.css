@@ -1,0 +1,9 @@
+div { 
+    margin: 1em 0;
+}
+button{
+background-color: rgb(124, 185, 165);
+color: rgb(75, 49, 16);
+border-color: rgb(63, 137, 153);
+border-radius: 10%;
+}

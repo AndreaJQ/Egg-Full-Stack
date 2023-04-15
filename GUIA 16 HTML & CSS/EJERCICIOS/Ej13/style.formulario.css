@@ -1,0 +1,17 @@
+label{
+    margin-top: 20px;
+}
+.btn {
+ background-color: rgb(77, 92, 144);
+ border-color: #627737;
+ border-radius: 10%;
+
+
+}
+
+
+.btn-primary:hover{
+    color:#fff;
+    background-color:rgb(97, 92, 194);
+    border-color:#0062cc
+}

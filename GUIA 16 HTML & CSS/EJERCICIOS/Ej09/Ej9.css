@@ -1,0 +1,57 @@
+#titulo{
+    color: rgb(40,113,114)	;
+}
+.resaltarRojo{
+    color: rgb(220,0,14);
+}
+.destacado{
+    color: rgb(240,165,70);
+}
+h2#subtitulo{
+    color: blue;
+}
+
+#link1{
+    color: red;
+}
+#link2{
+    color: blue;
+}
+
+
+span.especial{
+    color:blueviolet
+}
+
+#rojo{
+    color: rgb(220,0,14);
+}
+#verde{
+    color: green ;
+}
+#amarillo{
+    color: rgb(240,165,70);
+}
+
+#adicional{
+    color:rgb(133, 147, 103)
+}
+
+#especial{
+    color:blueviolet
+}
+table{
+    border: 3px solid #000; 
+    border-collapse: collapse;
+    
+    
+}
+td{
+    border: 3px solid #000;
+    border-collapse: collapse;
+   
+}
+th{
+    border: 3px solid #000;
+    border-collapse: collapse;
+}

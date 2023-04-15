@@ -1,0 +1,6 @@
+/*
+Indicate the current item by using aria-current="page" for the current page or aria-current="true" for the current item in a set.*/
+
+body{
+    background: url(img2) no-repeat;
+}

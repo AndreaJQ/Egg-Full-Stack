@@ -1,0 +1,53 @@
+<!DOCTYPE>: define la versión de HTML que se está utilizando.
+<html>: indica el comienzo y final de la sección HTML del documento.
+<head>: contiene información de metadatos del documento, como el título, la descripción y las palabras clave.
+<title>: define el título del documento que se muestra en la pestaña del navegador.
+<body>: contiene todo el contenido visible del documento.
+<h1>-<h6>: define los encabezados del documento, siendo <h1> el más grande y <h6> el más pequeño.
+<p>: define un párrafo de texto.
+<a>: crea un enlace a otra página web o recurso.
+<img>: inserta una imagen en el documento.
+<ul>: crea una lista no ordenada.
+<ol>: crea una lista ordenada.
+<li>: define un elemento de lista en una lista.
+<table>: crea una tabla de datos.
+<tr>: define una fila en una tabla.
+<td>: define una celda en una tabla.
+<form>: crea un formulario interactivo.
+<input>: define un campo de entrada de datos en un formulario.
+<button>: crea un botón interactivo.
+<div>: se utiliza para agrupar elementos en una sección del documento.
+<span>: se utiliza para aplicar estilos o atributos a una parte específica de un texto.
+
+Para tablas:
+
+<caption>: se utiliza para agregar un título a la tabla.
+<thead>: se utiliza para definir el encabezado de la tabla.
+<tbody>: se utiliza para definir el cuerpo de la tabla.
+<tfoot>: se utiliza para definir el pie de la tabla.
+<th>: se utiliza para definir una celda de encabezado en una tabla.
+
+Para botones:
+
+<button>: crea un botón que puede ser utilizado para activar eventos en el documento.
+<input type="button">: crea un botón que puede ser utilizado para activar eventos en el documento.
+<input type="submit">: crea un botón que envía los datos de un formulario al servidor.
+<input type="reset">: crea un botón que restablece los campos de un formulario a sus valores predeterminados.
+<a> con href y role="button": crea un botón utilizando un enlace que puede ser utilizado para activar eventos en el documento
+
+Estas etiquetas pueden ser útiles para estructurar mejor tu contenido 
+y hacerlo más accesible para los usuarios y para los motores de búsqueda.
+
+
+<nav>: se utiliza para definir una sección de navegación en el documento.
+<header>: se utiliza para definir la cabecera de una sección o del documento completo.
+<footer>: se utiliza para definir el pie de página de una sección o del documento completo.
+<aside>: se utiliza para definir contenido que es secundario o complementario al contenido principal de la página.
+<section>: se utiliza para definir una sección de contenido en el documento.
+<article>: se utiliza para definir un artículo independiente en el documento.
+<main>: se utiliza para definir el contenido principal del documento.
+<time>: se utiliza para definir una fecha o hora en el documento.
+
+
+
+

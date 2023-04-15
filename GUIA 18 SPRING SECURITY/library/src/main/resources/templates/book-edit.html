@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layout}">
+
+<head>
+  <link rel="stylesheet" href="/static/css/formulario.css">
+  <title>EDIT BOOK</title>
+
+</head>
+
+<body >
+
+
+<section layout:fragment="body" class="py-5">
+  <div class="container" >
+
+    <form class="formulario" th:action="@{/book/edit/{bookId} (bookId=${book.id})}" th:object="${book}" method="POST">
+      <input hidden th:value= "${id}"
+             name="id">
+
+      <div class="form-group my-3">
+        <label class="mb-2">Edit book title</label>
+
+        <input th:value="${book.title}"
+               type="text"
+               class="form-control"
+               name="title"
+               placeholder="title">
+      </div>
+
+      <div class="form-group my-3">
+        <label class="mb-2">Samples</label>
+        <input th:value="${book.samples}"
+               type="number"
+               class="form-control"
+               name="samples"
+               placeholder="Cantidad de Ejemplares">
+      </div>
+      <div class="form-group my-3">
+        <select name="author">
+          <option>Select Author</option>
+          <option th:each="author : ${author}"
+                  th:value="${author.id}"
+                  th:text="${author.name}"/>
+        </select>
+      </div>
+      <div> <p>In case the author is not listed first  - <a class="far fa-edit" th:href="@{/author/register}">ADD AUTHOR</a></p> </div>
+      <div class="form-group my-3">
+        <select name="editorial">
+          <option>Select Editorial</option>
+          <option th:each="editorial : ${editorial}"
+                  th:value="${editorial.id}"
+                  th:text="${editorial.name}"/>
+        </select>
+      </div>
+      <div> <p>In case the author is not listed first  - <a class="far fa-edit" th:href="@{/editorial/register}">ADD EDITORIAL</a></p> </div>
+      <button type="submit" class="btn btn-primary mt-3 botones">Update</button>
+    </form>
+
+
+
+  </div>
+</section>
+
+</body>
+</html>

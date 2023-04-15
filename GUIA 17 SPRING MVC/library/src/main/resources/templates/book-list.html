@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layout}">
+<head>
+
+  <title>AUTHORS</title>
+
+</head>
+
+<body >
+<section layout:fragment="body" class="py-6">
+
+  <div class="container m-5" >
+
+    <table class="table table-secondary">
+      <thead>
+      <tr>
+        <th scope="col">ISBN</th>
+        <th scope="col">TITLE</th>
+        <th scope="col">SAMPLES</th>
+        <th scope="col">AUTHOR</th>
+        <th scope="col">EDITORIAL</th>
+        <th scope="col" sec:authorize="hasAnyRole('ROLE_ADMIN')">ACTIONS</th>
+        <th scope="col"></th>
+
+
+      </tr>
+      </thead>
+      <tbody th:each="book : ${book}">
+      <tr>
+        <th scope="row" th:text="${book.id}"></th>
+        <td th:text="${book.title}"></td>
+        <td th:text="${book.samples}"></td>
+        <td th:text="${book.author.name}"></td>
+        <td th:text="${book.editorial.name}"></td>
+        <td><a sec:authorize="hasAnyRole('ROLE_ADMIN')" th:href= "@{/book/edit/{bookId} (bookId=${book.id})}"><i class="far fa-edit"></i> EDIT </a></td>
+        <td><a sec:authorize="hasAnyRole('ROLE_ADMIN')" th:href= "@{/book/delete/{bookId} (bookId=${book.id})}"><i class="fas fa-exclamation-circle"></i> DELETE </a> </td>
+      </tr>
+
+      </tbody>
+    </table>
+
+
+
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <a th:href="@{/}" class="btn btn-primary my-2">BACK</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+body{
+    background-color: rgb(199, 210, 219);
+}
+h1{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(87, 33, 133);
+    text-decoration:underline;
+    text-align: center;
+}
+
+h2{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(87, 33, 133);
+    text-decoration:underline;
+    text-align: center;
+}
+p{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
+    color: rgb(51, 51, 86);
+}
+li{
+    color: rgb(51, 51, 86);
+}
+
+/*<!-- VINCULOS PARA EJERCICIO 8  -->*/
+
+.link- {
+    color: #CC0000;
+    border-color: #627737;
+    border-radius: 10%;
+   }
+   
+   .link-:hover{
+       color:#fff;
+       background-color:#CC0000;
+       border-color:#0062cc
+   }
+   .link-:visited{
+    color: #000000;
+   }
+
+   /*LISTA CON VIÑETAS EJERCICIO 1 EXTRA*/
+
+   .lista{
+    list-style-type:square;
+    list-style-position: inside;
+   }
+
+  .viñeta{
+    color: #0062cc;
+  }
+  li span{
+    color: green;
+  }  
+  

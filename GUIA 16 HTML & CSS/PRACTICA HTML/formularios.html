@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <header>
+        <h1>FORMULARIO</h1>
+    </header>
+    <section>
+        <div>
+            <!-- ETIQUETA DE FORMULARIO -->
+            <!-- FORM ES EL CONTENEDOR DE MAYOR JERARQUÍA 
+            DONDE ENCONTRAMOS ATRIBUTOS COMO ACTION QUE GUÍA AL FORMULARIO
+        METHOD
+        CLASS
+        ENCTYPE -->
+            <form action="">
+                <div>
+                    <!-- ALMACENA EL TIPO DE DATO Y LA INFO QUE NECESITAMOS QUE INGRESE EN EL CAMPO -->
+                    <label for="nombre"></label> 
+                    <!-- INPUT NAME ES LA VARIABLE SOBRE LA QUE VA EL DATO. TIENE QUE TENER MISMO NOMBRE 
+                    TYPE
+                    PLACEHOLDER 
+                    REQUIRED-->
+                    
+                    <input name= "nombre" type="text" placeholder="Nombre y Apellido" required>
+                </div>
+                <div>
+                   
+                    <label for="mail"></label>
+                    <input name=" mail" type="mail" placeholder="email@correo.com" required>
+                </div>
+                <div>
+                    
+                    <label for="telefono"></label>
+                    <input name=" telefono" type="number" placeholder="12134124" required>
+                </div>
+                <div>
+                  
+                    <label for="pass"></label>
+                    <input name="pass" type="password" placeholder="contraseña" required>
+                </div>
+                <div>
+                    <!-- OPCION RADIO -->
+                    <label for="femenino">Femenino</label>
+                    <input name="femenino" type="radio" value="f" >
+                    <label for="masculino">Masculino</label>
+                    <input name="masculino" type="radio" value="m" >
+                </div>
+                <div>
+                    <!-- OPCION CHECKBOX -->
+                    <label for="femenino">Femenino</label>
+                    <input name="femenino" type="checkbox" value="f" >
+                    <label for="masculino">Masculino</label>
+                    <input name="masculino" type="checkbox" value="m" >
+                </div>
+                <div>
+                    
+                    <label for="pais">Pais de origen</label>
+                    <select name="" id=""> <!-- OPCIONES DESPLEGABLES -->
+                        <option value="arg">ARGENTINA</option>
+                        <option value="chi">CHILE</option>
+                        <option value="br">BRASIL</option>
+                    </select>
+                </div>
+                <div>
+                    <!-- CALENDARIOS -->
+                    <label for="date">Fecha de Nacimiento</label>
+                    <input name="date" type="date" placeholder="dd/mm/aaaa" required>
+                </div>
+                <div>
+                    <!-- INGRESO DE ARCHIVOS -->
+                    <label for="image"></label>
+                    <input name="image" type="file"> <!-- ABRE GESTOR DE ARCHIVOS -->
+                </div>
+                 <!-- BOTON PARA EL INGRESO DE LOS DATOS -->
+                 <button type="submit"> ENVIAR INFO</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

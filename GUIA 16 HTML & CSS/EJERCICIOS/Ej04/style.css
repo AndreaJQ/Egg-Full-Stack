@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(226, 194, 154);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.titulo{
+    text-align:center;
+    color: rgb(27, 67, 67);
+}
+.imagen{
+border-radius: 6%;
+}
+
+.subtitulo{
+    color: rgb(32, 74, 106);
+}
+.foto-ingredientes{
+    display: flex;
+    flex-direction:row;
+    justify-content:space-around;
+    margin-right: 200px;
+
+}
+
+.paso-a-paso{
+    padding-right: 60px;
+    padding-left: 60px;
+
+}

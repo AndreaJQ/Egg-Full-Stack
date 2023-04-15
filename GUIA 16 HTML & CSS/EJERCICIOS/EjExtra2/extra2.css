@@ -1,0 +1,53 @@
+/*
+Pasos a hacer: 
+1) Alinear el texto de las celdas, cabeceras y título. Definir los bordes de la tabla, 
+celdas y cabeceras (color gris oscuro #333).
+2) Formatear las cabeceras de fila y columna con la imagen de fondo correspondiente en cada caso
+(fondo_gris.gif, euro.png, dolar.png, yen.png, libra.png). Modificar el tipo de letra de la tabla 
+y utilizar Arial. El color azul claro es #E6F3FF.
+3) Mostrar un color alterno en las filas de datos (color amarillo claro #FFFFCC).
+*/
+
+table{
+    width: 80%;
+    align-items: center;
+    border-collapse: collapse;
+    border: #333;
+    /*margin: 2em 2em 2em 2em;*/
+    font-family: Arial, Helvetica, sans-serif;
+   
+   
+    }
+
+table th{
+    background:url(fondo_gris.gif) ;
+    padding: 0.3em .3em 0.3em 1.2em;
+}
+
+th.euro {
+    background: #E6F3FF url(euro.png) no-repeat left center;
+    
+}
+
+table th.dolar {
+    background: #E6F3FF url(dolar.png) no-repeat left center;
+   
+}
+
+table th.libra {
+    background: #E6F3FF url(libra.png) no-repeat left center;
+   
+}
+
+table th.yen {
+    background: #E6F3FF url(yen.png) no-repeat left center;
+    
+}
+
+
+.amarillo {
+    background-color:#FFFFCC;
+}
+table td{
+    text-align: center;
+}

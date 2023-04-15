@@ -1,0 +1,23 @@
+body{
+    background-color: bisque;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+.titulo{
+
+    font-size: 50px;
+    color: rgb(39, 47, 114);
+}
+.aptPers{
+    color: rgb(39, 47, 114);
+}
+.aptitudes{
+    color: rgb(47, 26, 67);
+}
+
+.link-{
+    padding: 10px;
+    
+}
+.iconolink{
+    padding: 20px;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+>
+<head>
+  <title>Edit News</title>
+</head>
+<body class="d-flex flex-column h-100">
+
+<!-- Page Content-->
+<section layout:fragment="body" class="py-5">
+  <div class="container" >
+    <form role="form" method="post"th:action="@{/news/{newsId}/edit(newsId=${newsId})}" th:object="${news}">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="title">Edit News</label>
+          <input
+                  type="text"
+                  class="form-control"
+                  id="title"
+                  name="title"
+                  th:field="*{title}"
+                  placeholder="Title">
+          <p th:if="${#fields.hasErrors('title')}" class="text-danger" th:errors="*{title}"></p>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="author">Author</label>
+          <input
+                  type="text"
+                  class="form-control"
+                  id="author"
+                  name="author"
+                  th:field="*{author}"
+                  placeholder="Author">
+          <p th:if="${#fields.hasErrors('author')}" class="text-danger" th:errors="*{author}"></p>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="imgUrl">Image Url</label>
+          <input type="text"
+                 class="form-control"
+                 id="imgUrl"
+                 name="imgUrl"
+                 th:field="*{imgUrl}"
+                 placeholder="ImageUrl">
+          <p th:if="${#fields.hasErrors('imgUrl')}" class="text-danger" th:errors="*{imgUrl}"></p>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="subtitle">Subitle</label>
+          <input
+                  type="text"
+                  class="form-control"
+                  id="subtitle"
+                  name="subtitle"
+                  th:field="*{subtitle}"
+                  placeholder="Subtitle">
+          <p th:if="${#fields.hasErrors('subtitle')}" class="text-danger" th:errors="*{subtitle}"></p>
+        </div>
+      </div>
+      <div class="form-group mb-3">
+        <label for="content">Paragraph 1</label>
+        <input type="text"
+               class="form-control"
+               id="content"
+               name="content"
+               th:field="*{content}"
+               placeholder="Paragraph 1">
+        <p th:if="${#fields.hasErrors('content')}" class="text-danger" th:errors="*{content}"></p>
+      </div>
+      <div class="form-group mb-3">
+        <label for="content2">Paragraph 2</label>
+        <input type="text"
+               class="form-control"
+               id="content2"
+               name="content2"
+               th:field="*{content2}"
+               placeholder="Paragraph 2">
+        <p th:if="${#fields.hasErrors('content2')}" class="text-danger" th:errors="*{content2}"></p>
+      </div>
+      <div class="form-group mb-3">
+        <label for="content3">Paragraph 3</label>
+        <input type="text"
+               class="form-control"
+               id="content3"
+               name="content3"
+               th:field="*{content3}"
+               placeholder="Paragraph 3">
+        <p th:if="${#fields.hasErrors('content3')}" class="text-danger" th:errors="*{content3}"></p>
+      </div>
+      <div class="form-group mb-3">
+        <label for="content4">Paragraph 4</label>
+        <input type="text"
+               class="form-control"
+               id="content4"
+               name="content4"
+               th:field="*{content4}"
+               placeholder="Paragraph 4">
+        <p th:if="${#fields.hasErrors('content4')}" class="text-danger" th:errors="*{content4}"></p>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Edit</button>
+    </form>
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registro.css">
+    <title>Formularios</title>
+</head>
+<body>
+    <header>
+        <h1>Registrar un usuario</h1>
+    </header>
+    <section>
+        <div>
+            <!-- ETIQUETA DE FORMULARIO -->
+            <!-- FORM ES EL CONTENEDOR DE MAYOR JERARQUÍA 
+            DONDE ENCONTRAMOS ATRIBUTOS COMO ACTION QUE GUÍA AL FORMULARIO
+        METHOD
+        CLASS
+        ENCTYPE -->
+            <form action="">
+                <div>
+                    <!-- ALMACENA EL TIPO DE DATO Y LA INFO QUE NECESITAMOS QUE INGRESE EN EL CAMPO -->
+                    <label for="nombre">Nombre del usuario</label> <br>
+                    <!-- INPUT NAME ES LA VARIABLE SOBRE LA QUE VA EL DATO. TIENE QUE TENER MISMO NOMBRE 
+                    TYPE
+                    PLACEHOLDER 
+                    REQUIRED-->
+                    
+                    <input name= "nombre" type="text" placeholder="Nombre y Apellido" required>
+                </div>
+                <div>
+                  
+                    <label for="pass">Contraseña del usuario</label><br>
+                    <input name="pass" type="password" placeholder="contraseña" required>
+                </div>
+                <div>
+                    
+                    <label for="eded">Edad del usuario</label><br>
+                    <input name=" edad" type="number" placeholder="20" required>
+                </div>
+           
+                <div>
+                    <!-- CALENDARIOS -->
+                    <label for="date">Fecha de Nacimiento</label><br>
+                    <input name="date" type="date" placeholder="dd/mm/aaaa" required>
+                </div>
+
+                <div>
+                    <!-- OPCION RADIO -->
+                    <label for="sexo"> Sexo del usuario</label><br>
+                     <input name="femenino" id="femenino"  type="radio" value="f" ><label for="femenino">Femenino</label><br>
+                   
+                    <input name="masculino" id="maculino" type="radio" value="m" ><label for="masculino">Masculino</label> <br>
+                    
+                    <input name="noDecir" id="noDecir" type="radio" value="n" ><label for="noDecir">Prefiero no decir</label>
+                    
+                </div>
+
+                <div>
+                    
+                    <label for="pais">Pais de origen</label><br>
+                    <select name="" id=""> <!-- OPCIONES DESPLEGABLES -->
+                        <option value="arg">ARGENTINA</option>
+                        <option value="chi">CHILE</option>
+                        <option value="br">BRASIL</option>
+                    </select>
+                </div>
+
+                 <!-- BOTON PARA EL INGRESO DE LOS DATOS -->
+                 <button type="submit"> ENVIAR</button>
+                 <button type="reset"> BORRAR</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
