@@ -1,0 +1,48 @@
+<html
+        xmlns:th="http://thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layout}">
+<head>
+    <title>Comments List</title>
+</head>
+<body class="d-flex flex-column h-100">
+<main class="flex-shrink-0">
+    <section layout:fragment="body" class="py-5">
+        <div class="container px-5 my-5">
+
+            <div class="text-center mb-5">
+                <h1 class="fw-bolder">Users Comments</h1>
+                <p class="lead fw-normal text-muted mb-0">Find running events near you</p>
+            </div>
+
+           <table class="table table-secondary">
+                <thead>
+                <tr>
+                    <th scope="col">USER ID</th>
+                    <th scope="col">NAME</th>
+                    <th scope="col">COMMENT</th>
+                    <th scope="col">NEWS TITLE</th>
+                    <th scope="col">VIEW</th>
+                    <th scope="col">DELETE</th>
+                </tr>
+                </thead>
+                <tbody th:each="comments : ${comments}">
+                <tr>
+                    <th scope="row" th:text="${comments.user.id}"></th>
+                    <td th:text="${comments.user.username}"></td>
+                    <td th:text="${comments.content}"></td>
+                    <td scope="row" th:text="${comments.news.title}"></td>
+                    <td> <a th:href="@{/news/{newsId} (newsId=${comments.news.id})}" class="btn btn-primary">View</a></th>
+                    <td> <a th:href="@{/comments/delete/{commentsId} (commentsId=${comments.id})}" class="btn btn-primary">Delete</a></th>
+                </tr>
+
+                </tbody>
+            </table>
+        <!-- HAVING PROBLEMS WITH THE DB LINKING THE FOREIGN KEY -->
+
+
+        </div>
+    </section>
+</main>
+</body>
+</html>

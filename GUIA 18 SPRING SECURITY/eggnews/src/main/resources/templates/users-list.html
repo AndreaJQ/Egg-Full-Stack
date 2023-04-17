@@ -1,6 +1,5 @@
-<!DOCTYPE html>
 <html
-        xmlns:th="http://www.thymeleaf.org"
+        xmlns:th="http://thymeleaf.org"
         xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
         layout:decorate="~{layout}">
 <head>
@@ -30,8 +29,8 @@
       <tbody th:each="user : ${user}">
       <tr>
         <th scope="row" th:text="${user.id}"></th>
-        <td th:text="${user.name}"></td>
-        <td> <img th:if="${user.image != null}" class="logo" th:src="@{/image/profile/__${user.id}__}"> </td>
+        <td th:text="${user.username}"></td>
+        <!-- <td> <img th:if="${user.image != null}" class="logo" th:src="@{/image/profile/__${user.id}__}"> </td> -->
         <td th:text="${user.role}"></td>
         <td><a th:href= "@{/admin/editRole/{id} (id=${user.id})}"><i class="far fa-edit"></i> CHANGE </a></td>
         <td><a th:href= "@{/admin/delete/{id} (id=${user.id})}"><i class="fas fa-exclamation-circle"></i> DELETE </a> </td>

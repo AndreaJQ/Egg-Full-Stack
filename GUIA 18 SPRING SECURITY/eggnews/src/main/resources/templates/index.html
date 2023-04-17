@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+>
+<head>
+  <title>Headlines</title>
+</head>
+<body class="d-flex flex-column h-100">
+
+
+<!-- Page Content-->
+<section layout:fragment="body" class="py-5">
+  <div class="container px-5 my-5">
+    <div class="text-center mb-5">
+      <h1>News</h1>
+      <h2 class="fw-bolder">What's happening in the world</h2>
+      <br>
+      <br>
+      <h2 class="fw-bolder" style="color:gray" th:text=" 'Welcome back '+ ${session.usersession.username} "></h2>
+      <img src="/assets/headlines.jpg" alt="">
+    </div>
+
+    <div class="row gx-5">
+      <div>
+        <form th:action="@{/news/search}" class="form-inline my-2 my-lg-0 mb-3">
+          <input name="query" class=" form-control mr-sm-2 mb-5" type="search" placeholder="Search"aria-label="Search">
+        </form>
+      </div>
+
+
+    </div>
+  </div>
+  </div>
+</section>
+
+</body>
+</html>
