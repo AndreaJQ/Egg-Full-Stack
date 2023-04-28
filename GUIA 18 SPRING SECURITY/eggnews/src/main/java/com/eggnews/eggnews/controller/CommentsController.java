@@ -2,12 +2,15 @@ package com.eggnews.eggnews.controller;
 
 import com.eggnews.eggnews.dto.CommentsDto;
 import com.eggnews.eggnews.models.Comments;
+import com.eggnews.eggnews.models.UserEntity;
 import com.eggnews.eggnews.service.CommentsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -36,18 +39,23 @@ public class CommentsController {
     }
 
     @GetMapping("/comments/{newsId}/new")
-    public String addCommentForm(@PathVariable("newsId") Long newsId, Model model){
+    public String addCommentForm(@PathVariable("newsId") Long newsId, HttpSession session, ModelMap model){
+        UserEntity user = (UserEntity) session.getAttribute("usersession");//added
         Comments comments = new Comments();
-        model.addAttribute("newsId", newsId);
-        model.addAttribute("comments", comments);
+        model.put("newsId", newsId);
+        model.put("comments", comments);
+        model.put("user", user);//added
         return "comments-create";
     }
 
     @PostMapping("/comments/{newsId}")
     public String comment(@PathVariable("newsId")Long newsId,
-                          @ModelAttribute("comments") CommentsDto commentsDto, Model model){
-
-        commentsService.createComment(newsId,commentsDto);
+                          @ModelAttribute("comments") CommentsDto commentsDto,
+                          HttpSession session, ModelMap model){
+        UserEntity user = (UserEntity) session.getAttribute("usersession");
+        model.put("user", user);
+        String userId = user.getId();
+        commentsService.createComment(newsId,commentsDto, userId);
         return "redirect:/news/" + newsId;
     }
 

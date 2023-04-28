@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface CommentsService {
 
-    void createComment(Long newsId, CommentsDto commentsDto);
+    void createComment(Long newsId, CommentsDto commentsDto, String userId);
 
     List<CommentsDto> findAllComments();
 

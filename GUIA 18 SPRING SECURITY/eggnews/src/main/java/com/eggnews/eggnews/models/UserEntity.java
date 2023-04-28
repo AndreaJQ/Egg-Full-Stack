@@ -6,7 +6,8 @@ import org.hibernate.annotations.GenericGenerator;
 
 
 import javax.persistence.*;
-
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Data
@@ -30,6 +31,9 @@ public class UserEntity {
     @Enumerated(EnumType.STRING)
     private Role role;
 
-    @OneToOne
-    private Comments comments;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.REMOVE)
+    private List<Comments> comments=new ArrayList<>();
+
+
+
 }

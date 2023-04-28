@@ -32,8 +32,8 @@ public class Comments {
     @JoinColumn(name="news_id", nullable = false)
     private News news;
 
-    @OneToOne
-    @JoinColumn(name="user_id")
+    @ManyToOne
+    @JoinColumn(name="user_id", nullable = false)
     private UserEntity user;
 }
 
