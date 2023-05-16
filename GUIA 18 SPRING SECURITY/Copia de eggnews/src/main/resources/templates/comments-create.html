@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+>
+<head>
+  <title>Event </title>
+</head>
+<body class="d-flex flex-column h-100">
+
+<!-- Page Content-->
+<section layout:fragment="body" class="py-5">
+  <div class="container" >
+    <form role="form" method="post"th:action="@{/comments/{newsId}(newsId=${newsId})}" th:object="${comments}">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="content">Comments</label>
+          <input
+                  type="text"
+                  class="form-control"
+                  id="content"
+                  name="content"
+                  th:field="*{content}"
+                  placeholder="Comment">
+          <!--<p th:if="${#fields.hasErrors('name')}" class="text-danger" th:errors="*{name}"></p>-->
+      </div>
+
+
+
+      <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+  </div>
+</section>
+
+</body>
+</html>

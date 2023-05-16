@@ -1,0 +1,101 @@
+<html
+        xmlns:th="http://thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layout}">
+<head>
+  <title >Full News</title>
+</head>
+<body class="d-flex flex-column">
+
+<section layout:fragment="body">
+  <header class="py-5 bg-light border-bottom mb-4">
+    <div class="container">
+      <div class="text-center my-5">
+        <h1 class="fw-bolder" th:text="${news.title}"></h1>
+        <p class="lead mb-0" th:text="${news.author}"> </p>  <!-- COLOCAR AUTOR-->
+      </div>
+    </div>
+  </header>
+  <!-- Page content-->
+  <div class="container">
+    <div class="row">
+      <!-- Blog entries-->
+      <div class="col-lg-8">
+        <!-- Featured blog post-->
+        <div class="card mb-4">
+          <a href="#!"><img class="card-img-top" th:src="${news.imgUrl}" alt="..." /></a>
+          <div class="card-body">
+            <div class="small text-muted" th:text="${news.createdOn}"></div>
+            <h3 class="fw-bolder" th:text="${news.subtitle}"> </h3>
+            <p class="card-text" th:text="${news.content}"></p>
+            <p class="card-text" th:text="${news.content2}"></p>
+            <p class="card-text" th:text="${news.content3}"></p>
+            <p class="card-text" th:text="${news.content4}"></p>
+            <a class="btn btn-primary" th:href="@{/news/{newsId}/delete(newsId=${news.id})}">Delete</a>
+            <a class="btn btn-primary" th:href="@{/comments/{newsId}/new(newsId=${news.id})}">Comment</a>
+
+         </div>
+       </div>
+
+        <!-- Nested row for non-featured blog posts-->
+        <div class="row">
+          <div class="col-lg-6">
+            <!-- Blog post-->
+            <div th:each="comments :${news.comments}" class="card mb-4">
+
+              <div class="card-body">
+                <!-- -----------------LATER ON ADD USERNAME---------------- -->
+                <div class="small text-muted" th:text="${comments.createdOn}"></div>
+                <p th:text="${comments.content}"class="card-title h4"></p>
+                <!-- -----------------LATER ON ADD SECURITY FILTER---------------- -->
+                <a class="btn btn-primary" th:href="@{/comments/delete/{commentsId}(commentsId=${comments.id})}">Delete</a>
+              </div>
+            </div>
+            <!-- Blog post-->
+          </div>
+        </div>
+
+       <!-- Side widgets-->
+        <div class="col-lg-4">
+          <!-- Search widget-->
+          <div class="card mb-4">
+
+            <div class="card-header">Search</div>
+            <div class="card-body">
+
+
+              <div>
+                <form th:action="@{/news/search}" class="form-inline my-2 my-lg-0 mb-3">
+                  <input name="query" class=" form-control mr-sm-2 mb-5" type="search" placeholder="Search"aria-label="Search">
+                </form>
+              </div>
+
+            </div>
+          </div>
+          <!-- Categories widget-->
+          <div class="card mb-4">
+            <div class="card-header">Categories</div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-6">
+                  <ul class="list-unstyled mb-0">
+                    <li><a href="#!">Sports</a></li>
+                    <li><a href="#!">Economy</a></li>
+                    <li><a href="#!">Last minute</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Side widget-->
+          <div class="card mb-4">
+            <div class="card-header">Side Widget</div>
+            <div class="card-body">You can put anything you want inside of these side widgets!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
