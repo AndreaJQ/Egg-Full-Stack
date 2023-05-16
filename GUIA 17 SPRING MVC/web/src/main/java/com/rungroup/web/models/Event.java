@@ -33,6 +33,6 @@ public class Event {
     private LocalDateTime updatedOn;
 
     @ManyToOne
-    @JoinColumn(name="club_id", nullable = false)
+    @JoinColumn(name="club_id")
     private Club club;
 }
