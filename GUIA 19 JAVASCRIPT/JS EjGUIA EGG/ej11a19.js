@@ -37,23 +37,25 @@ var typeOf=(ingreso) => console.log("el tipo de dato es: " + typeof(ingreso));
 
 /* 14. Crear un objeto libro que contenga las siguientes propiedades: ISBN, Título, Autor, Número de páginas. Crear un método para cargar un libro pidiendo los datos al usuario y luego informar mediante otro método el número de ISBN, el título, el autor del libro y el numero de páginas. */
 
-// let a =prompt("Ingrese el isbn del libro")
-// let b = prompt("Ingrese el titulo del libro")
-// let c = prompt("Ingrese el autor del libro")
-// let d =parseInt(prompt("Ingrese el numero de paginas del libro"))
+let a =prompt("Ingrese el isbn del libro")
+let b = prompt("Ingrese el titulo del libro")
+let c = prompt("Ingrese el autor del libro")
+let d =parseInt(prompt("Ingrese el numero de paginas del libro"))
 
-// let libro = {
-//     isbn : a,
-//     titulo: b,
-//     autor: c,
-//     numPaginas: d,
-//     mostrarInfo: () => {
-//         return `ISBN: ${libro.isbn}
-// TITULO: ${libro.titulo}
-// AUTOR: ${libro.autor}
-// NUMERO DE PAGINAS: ${libro.numPaginas}`
-//     }
-// }
+let libro = {
+    isbn : a,
+    titulo: b,
+    autor: c,
+    numPaginas: d,
+    
+    mostrarInfo: () => {
+        return `ISBN: ${libro.isbn}
+TITULO: ${libro.titulo}
+AUTOR: ${libro.autor}
+NUMERO DE PAGINAS: ${libro.numPaginas}`
+    }
+    
+}
 
 console.log(libro.mostrarInfo())
 
